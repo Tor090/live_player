@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:live_player/unauthentication/cubit/first_player_bloc.dart';
+import 'package:live_player/widgets/cubit/first_player_bloc.dart';
 
 import 'first_video_player.dart';
 

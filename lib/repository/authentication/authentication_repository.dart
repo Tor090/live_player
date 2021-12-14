@@ -1,9 +1,11 @@
 import 'dart:async';
 
+/// State of authentication on program.
 enum AuthenticationStatus { unknown, authenticated, unauthenticated, unlogined }
 
 class AuthenticationRepository {
   final _controller = StreamController<AuthenticationStatus>();
+
 
   Stream<AuthenticationStatus> get status async* {
     await Future<void>.delayed(const Duration(seconds: 1));
@@ -11,6 +13,7 @@ class AuthenticationRepository {
     yield* _controller.stream;
   }
 
+/// Method [logIn] for sign in into this program.
   Future<void> logIn({
     required String username,
     required String password,

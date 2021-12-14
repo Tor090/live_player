@@ -1,32 +1,15 @@
-import 'package:equatable/equatable.dart';
-import 'package:live_player/repository/cars/list_cars.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:live_player/repository/cars/carlist.dart';
+import 'package:live_player/repository/cars/cars.dart';
 
-abstract class CarsState extends Equatable {
-  const CarsState();
-}
+/// Class [CarCubit] realize fetch from API whit Cubit architecture on home page.
+class CarCubit extends Cubit<List<Cars>> {
+  CarCubit() : super([]);
 
-class CovidInitial extends CarsState {
-  const CovidInitial();
-  @override
-  List<Object> get props => [];
-}
+  List<Cars> car = [];
 
-class CarsLoading extends CarsState {
-  const CarsLoading();
-  @override
-  List<Object> get props => [];
-}
-
-class CarsLoaded extends CarsState {
-  final CarsList covidModel;
-  const CarsLoaded(this.covidModel);
-  @override
-  List<Object> get props => [covidModel];
-}
-
-class CarsError extends CarsState {
-  final String message;
-  const CarsError(this.message);
-  @override
-  List<Object> get props => [message];
+  void backCar() async{
+    car = await carCreate();
+    emit(car);
+  }
 }

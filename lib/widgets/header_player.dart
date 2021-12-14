@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Class [HeaderPlayer] for create a header of videoplayer.
 class HeaderPlayer extends StatelessWidget {
   HeaderPlayer(this.label);
 
@@ -8,8 +9,6 @@ class HeaderPlayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 64,
-      width: 603,
       color: Colors.blue[900],
       child: Padding(
         padding: const EdgeInsets.only(left: 5, right: 3),

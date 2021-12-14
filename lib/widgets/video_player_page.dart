@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'first_video_player_view.dart';
 import 'second_video_player_view.dart';
 
+
+/// Class [VideoPlayerPage] for create a row with two video players. 
 class VideoPlayerPage extends StatelessWidget {
   const VideoPlayerPage({Key? key}) : super(key: key);
 

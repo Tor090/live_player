@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:live_player/unauthentication/cubit/first_player_bloc.dart';
+import 'package:live_player/widgets/cubit/first_player_bloc.dart';
 
 import 'header_player.dart';
 
+/// Class [FirstVideoPlayer] that realize a first player. 
 class FirstVideoPlayer extends StatelessWidget {
   FirstVideoPlayer(this.label);
 
@@ -17,8 +18,6 @@ class FirstVideoPlayer extends StatelessWidget {
       children: [
         HeaderPlayer(label),
         Container(
-            height: 339,
-            width: 603,
             color: Colors.blue[200],
             child: BlocBuilder<FirstAuthCubit, VideoPlayerController>(
                 builder: (context, state) {

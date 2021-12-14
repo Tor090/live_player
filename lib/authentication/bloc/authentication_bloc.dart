@@ -6,6 +6,7 @@ import 'package:live_player/repository/user/user.dart';
 import 'package:live_player/repository/user/user_repository.dart';
 import 'authentication_state.dart';
 
+/// Class [AuthenticationBloc] that realize authentication with BloC architecture on this program.
 class AuthenticationBloc
     extends Bloc<AuthenticationEvent, AuthenticationState> {
   AuthenticationBloc({
@@ -34,6 +35,7 @@ class AuthenticationBloc
     return super.close();
   }
 
+  /// Method [_onAuthenticationStatusChanged] change our status when we try sign in. 
   void _onAuthenticationStatusChanged(
     AuthenticationStatusChanged event,
     Emitter<AuthenticationState> emit,

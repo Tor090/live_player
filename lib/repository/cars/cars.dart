@@ -1,3 +1,5 @@
+
+/// Class [Cars] what we fetch from API.
 class Cars {
   final int number;
   final String date;
